@@ -90,29 +90,24 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
         //Checks if the snake hits the wall
         if(direction.equals("left")) {
             if(snakehead.getX() == 0) {
-                //if you want wall collision, set to resetgame else set x to other side
-//                snakehead.setX(BOARD_SIZE - 1);
                 resetGame();
             } else {
                snakehead.setX(snakehead.getX() - 1);
             }
         } else if(direction.equals("up")) {
             if(snakehead.getY() == 0) {
-//                snakehead.setY(BOARD_SIZE - 1);
                 resetGame();
             } else {
                 snakehead.setY(snakehead.getY() - 1);
             }
         } else if(direction.equals("right")) {
             if(snakehead.getX() == BOARD_SIZE - 1) {
-//                snakehead.setX(0);
                 resetGame();
             } else {
                 snakehead.setX(snakehead.getX() + 1);
             }
         } else if(direction.equals("down")) {
             if(snakehead.getY() == BOARD_SIZE - 1) {
-//                snakehead.setY(0);
                 resetGame();
             } else {
                 snakehead.setY(snakehead.getY() + 1);
